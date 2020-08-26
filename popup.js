@@ -15,7 +15,7 @@ function calculate() {
     const b = document.getElementById("amount");
     let amount = b.value;
     let cur = d.options[d.selectedIndex].text;
-    document.getElementById("outPut").innerHTML = DATA.rates.cur;
+    document.getElementById("outPut").innerHTML = DATA.rates.USD;
 }
 
 function nzdAsBase(data) {
