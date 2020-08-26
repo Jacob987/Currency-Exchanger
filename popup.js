@@ -19,7 +19,7 @@ function nzdAsBase(data) {
 }
 
 document.getElementById("button").addEventListener('click', calculate);
-document.getElementById("button").addEventListener('keyup', function(e) {
+document.getElementById("amount").addEventListener('keyup', function(e) {
     if (e.keyCode === 13) {
         calculate();
     }
@@ -35,7 +35,7 @@ function calculate() {
         newPrice = oldPrice*USD_TO_NZD;
     }
     else if (cur == "EUR") {
-        newPrice = oldPrice*USD_TO_NZD;
+        newPrice = oldPrice*EUR_TO_NZD;
     }
     else if (cur == "GBP") {
         newPrice = oldPrice*GBP_TO_NZD;
@@ -45,7 +45,7 @@ function calculate() {
     }
     document.getElementById("outPut").innerHTML="";
     const div = document.createElement('div');
-    div.textContent = `${newPrice}`;
+    div.textContent = `$${newPrice.toFixed(2)} NZD`;
     document.getElementById("outPut").appendChild(div);
 }
 
