@@ -1,16 +1,21 @@
-const USD_TO_NZD;
-const EUR_TO_NZD;
-const GBP_TO_NZD;
-const AUD_TO_NZD;
+var USD_TO_NZD;
+var EUR_TO_NZD;
+var GBP_TO_NZD;
+var AUD_TO_NZD;
+let DATA;
 
 fetch('http://data.fixer.io/api/latest?access_key=185ab81e58e51f47a9afcb917ef171e5')
 .then(res => res.json())
 .then((data) => {
-    nzdAsBase(data);
+    DATA = data;
 });
 
 function calculate() {
-
+    const d = document.getElementById("currency");
+    const b = document.getElementById("amount");
+    let amount = b.value;
+    let cur = d.options[d.selectedIndex].text;
+    document.getElementById("outPut").innerHTML = DATA.rates.cur;
 }
 
 function nzdAsBase(data) {

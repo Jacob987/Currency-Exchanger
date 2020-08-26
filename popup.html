@@ -7,18 +7,15 @@
 </head>
 <body>
     <script src="popup.js"></script>
-    <div>
-        <p id="p"></p>
-    </div>
-    <div><label for="cars">Choose currency to convert from</label></div>
-    <select name="cars" id="cars">
+    <div><label for="cars">Choose currency to convert from:</label></div>
+    <select id="currency">
         <option value="usd">USD</option>
         <option value="eur">EUR</option>
         <option value="aud">AUD</option>
         <option value="gbp">GBP</option>
     </select>
-    <input type="text" placeholder="Enter amount">
-    <button type="button" onclick="calculate()">Calculate</button>
-    
+    <input id="amount" type="text" placeholder="Enter amount">
+    <button type="button" onclick="calculate();">Calculate</button>
+    <div id="outPut"></div>
 </body>
 </html>
