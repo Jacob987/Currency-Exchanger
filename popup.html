@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=5.0">
     <title>Document</title>
+
+    <script defer="true" src="popup.js"></script>
 </head>
 <body>
-    <script src="popup.js"></script>
     <div><label for="cars">Choose currency to convert from:</label></div>
     <select id="currency">
         <option value="usd">USD</option>
@@ -15,7 +16,7 @@
         <option value="gbp">GBP</option>
     </select>
     <input id="amount" type="text" placeholder="Enter amount">
-    <button type="button" onclick="calculate();">Calculate</button>
+    <button id="button" type="button">Calculate</button>
     <div id="outPut"></div>
 </body>
 </html>
