@@ -2,7 +2,6 @@ var USD_TO_NZD;
 var EUR_TO_NZD;
 var GBP_TO_NZD;
 var AUD_TO_NZD;
-let DATA;
 
 
 fetch('http://data.fixer.io/api/latest?access_key=185ab81e58e51f47a9afcb917ef171e5')
