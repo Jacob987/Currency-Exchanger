@@ -25,6 +25,7 @@ document.getElementById("amount").addEventListener('keyup', function(e) {
 })
 
 function calculate() {
+    alert("HELLO");
     let newPrice;
     const d = document.getElementById("currency");
     const b = document.getElementById("amount");
